@@ -22,9 +22,9 @@ class Spa extends Seeder
         ]);
 
         DB::table('criticidades')->insert([
-            ['nome' => 'alta'],
-            ['nome' => 'média'],
-            ['nome' => 'baixa']
+            ['nome' => 'Alta'],
+            ['nome' => 'Média'],
+            ['nome' => 'Baixa']
         ]);
 
         DB::table('incidentes')->insert([
