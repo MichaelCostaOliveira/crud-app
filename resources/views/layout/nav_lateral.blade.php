@@ -3,7 +3,7 @@
         <div class="navbar-header" >
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto">
-                    <a class="navbar-brand" href="/home">
+                    <a class="navbar-brand" href="/">
                         <span class="brand-logo">
                              <img src="{{ asset('img/Logoblack.png', env('SECURE_PATH',  null)) }}" alt="" class="img-fluid">
                         </span>
@@ -17,7 +17,7 @@
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="{{ $elementActive == 'Incidentes' ? 'active' : '' }} nav-item">
-                    <a class="d-flex align-items-center" href="/home" onclick="link('/home')">
+                    <a class="d-flex align-items-center" href="/" onclick="link('/')">
                     <i data-feather='home'></i><span class="menu-title text-truncate" data-i18n="deshboard">Incidentes</span></a>
                 </li>
             </ul>

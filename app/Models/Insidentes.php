@@ -13,7 +13,7 @@ class Insidentes extends Model
     protected $fillable	 = [
         'id',
         'criticidade_id',
-        'insidente_id',
+        'tipo_id',
         'titulo',
         'descricao',
         'status'

@@ -13,8 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/spa/all', [App\Http\Controllers\SpaController::class, 'index'])
+Route::get('/',[App\Http\Controllers\SpaController::class, 'index']);
+
+Route::get('/spa/all', [App\Http\Controllers\SpaController::class, 'getIncident'])
     ->name('spa_all');
+
+Route::get('/spa/delete/{id?}', [App\Http\Controllers\SpaController::class, 'destroy'])
+    ->name('delete');
+
+Route::get('/spa/edit/{id?}', [App\Http\Controllers\SpaController::class, 'edit'])
+    ->name('edit');
+
+Route::post('/spa/edit/{id?}', [App\Http\Controllers\SpaController::class, 'update'])
+    ->name('update');
+
+Route::post('/spa/store', [App\Http\Controllers\SpaController::class, 'store'])
+    ->name('store');

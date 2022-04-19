@@ -40,7 +40,7 @@ $(function () {
 
    fileUpload.dropzone({
       paramName: 'file', // The name that will be used to transfer the file
-      maxFilesize: 10, // MB      
+      maxFilesize: 10, // MB
       clickable: true,
       init: function () {
          var totalFiles = 0;
@@ -56,17 +56,10 @@ $(function () {
                console.log('completo');
                // fileUpload.removeAllFiles( true );
                Dropzone.forElement("#file-upload").removeAllFiles(true);
-               getfiles();
             }
          });
       }
    });
-   getfiles();
-   function getfiles() {
-      $.get('/file-upload/getfiles/' + iduser, function (retorno) {
-         $('#cardArquivos').html(retorno);
-      });
-   }
 
    function down_file(url, name) {
       var a = $("<a>")
@@ -91,7 +84,7 @@ $(function () {
       var id = $(this).data('id');
       var divpai = $(this);
       var divpai = divpai.closest('.file-manager-item');
-      //mensagem de confirmar 
+      //mensagem de confirmar
       Swal.fire({
          title: 'Remover o arquivo',
          text: $(this).data('name') + '?',

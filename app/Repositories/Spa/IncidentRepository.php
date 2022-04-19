@@ -9,7 +9,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 
-class SpaRepository extends BaseRepository
+class IncidentRepository extends BaseRepository
 {
 
     protected $incident;
@@ -24,12 +24,6 @@ class SpaRepository extends BaseRepository
         $this->model = $this->relationships(['insidetesCriticidade', 'insidetesTipos']);
         $data = $this->model->get()->toArray();
         return $data;
-    }
-
-
-    public function verifyColumns($value)
-    {
-        return Schema::hasColumn('application_origin', $value);
     }
 
 }
